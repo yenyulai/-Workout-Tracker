@@ -35,6 +35,9 @@ const WorkoutSchema = new Schema({
     type: Number,
     required: true,
   },
+  distance: {
+    type: Number
+  },
 
   sets:  {
     type: Number,
@@ -50,10 +53,16 @@ const WorkoutSchema = new Schema({
 // };
 
 //-----------------total duration -------------------------
-// UserSchema.methods.makeCool = function() {
-//   this.isCool = true;
-//   return this.isCool;
-// };
+WorkoutSchema.methods.totalDuration = function() {
+  this.totalDuration = Workout.aggregate([
+    {
+      $project: {
+        durationTotal:{ $sum: "$exercises.duration"}
+      }
+    }
+  ])
+  return this.totalDuration;
+};
 
 const Workout = mongoose.model("Workout", WorkoutSchema);
 
