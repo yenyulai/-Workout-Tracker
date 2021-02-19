@@ -1,5 +1,5 @@
 # -Workout-Tracker
-![]()
+![](https://github.com/yenyulai/-Workout-Tracker/blob/main/images/workout-tracker.gif)
 
 ## Installation
 
