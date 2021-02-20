@@ -18,7 +18,7 @@ app.use(express.static("public"));
 // var uri = "mongodb+srv://yenyulai:lannie5i@cluster0.rhldq.mongodb.net/workout?retryWrites=true&w=majority"
 
 // mongoose.connect(uri, { useNewUrlParser: true,})
-// MONGODB_URI="mongodb+srv://yenyulai:3345678@cluster0.rhldq.mongodb.net?retryWrites=true&w=majority"
+MONGODB_URI="mongodb+srv://yenyulai:3345678@cluster0.rhldq.mongodb.net?retryWrites=true&w=majority"
 
 
 
