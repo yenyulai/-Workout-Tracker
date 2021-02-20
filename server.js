@@ -14,7 +14,17 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", 
+
+// var uri = "mongodb+srv://yenyulai:lannie5i@cluster0.rhldq.mongodb.net/workout?retryWrites=true&w=majority"
+
+// mongoose.connect(uri, { useNewUrlParser: true,})
+MONGODB_URI="mongodb+srv://yenyulai:3345678@cluster0.rhldq.mongodb.net?retryWrites=true&w=majority"
+
+
+
+
+mongoose.connect(MONGODB_URI || "mongodb://localhost/workout", 
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", 
 { 
   useNewUrlParser: true,
   useUnifiedTopology: true,
